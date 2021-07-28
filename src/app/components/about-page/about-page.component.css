@@ -1,0 +1,56 @@
+.big-text{
+    font-size: 45px;
+    margin: 55px 0;
+    margin-left: 50px;
+    color: darkorange;
+    font-weight: lighter;
+}
+.p1{
+    font-size: 20px;
+    margin-top: -50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.comment{
+    font-size: 30px;   
+    color:darkorange;
+    font-weight:600;
+}
+
+.marche{
+    font-size: 40px;   
+    color:#fcd53a;
+    font-weight:600;
+}
+
+.d1{
+    margin-bottom: 15px;
+}
+
+.p3{
+    margin-top: 75px;
+}
+
+.p2{
+    margin-bottom: 75px;
+}
+
+.triangle-down-white {
+	width: 0;
+    margin: auto;
+	height: 0;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	border-top: 50px solid white;
+}
+
+.triangle-down-bg {
+	width: 0;
+    margin: auto;
+	height: 0;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	border-top: 50px solid #f8f9fa;
+}
+
