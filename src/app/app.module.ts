@@ -7,8 +7,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { CourseListComponent } from './components/course-list/course-list.component';
 import { AboutPageComponent } from './components/about-page/about-page.component';
-import { QuestionComponent } from './question/question.component';
-import { UserProfilComponent } from './user-profil/user-profil.component';
+import { QuestionComponent } from './components/question/question.component';
+import { UserProfilComponent } from './components/user-profil/user-profil.component';
 
 
 const routes: Routes = [
