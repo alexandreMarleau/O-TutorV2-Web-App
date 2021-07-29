@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { CourseListComponent } from './components/course-list/course-list.component';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { QuestionComponent } from './question/question.component';
+import { UserProfilComponent } from './user-profil/user-profil.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'courses', component: CourseListComponent},
   {path: 'login', component: LoginComponent},
   {path: 'question', component: QuestionComponent},
+  {path: 'profil', component: UserProfilComponent},
   {path: '', redirectTo: '/about', pathMatch: 'full'},
   {path: '**', redirectTo: '/about', pathMatch: 'full'}
 ];
@@ -26,6 +28,7 @@ const routes: Routes = [
     CourseListComponent,
     AboutPageComponent,
     QuestionComponent,
+    UserProfilComponent,
 
   ],
   imports: [
