@@ -10,6 +10,7 @@ import { AboutPageComponent } from './components/about-page/about-page.component
 import { QuestionComponent } from './components/question/question.component';
 import { UserProfilComponent } from './components/user-profil/user-profil.component';
 import { CollegeListComponent } from './components/college-list/college-list.component';
+import { EtudiantTBComponent } from './components/etudiant-tb/etudiant-tb.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'question', component: QuestionComponent},
   {path: 'profil', component: UserProfilComponent},
   {path: 'collegelist', component: CollegeListComponent},
+  {path: 'etudiant', component: EtudiantTBComponent},
   {path: '', redirectTo: '/about', pathMatch: 'full'},
   {path: '**', redirectTo: '/about', pathMatch: 'full'}
 ];
@@ -32,6 +34,7 @@ const routes: Routes = [
     QuestionComponent,
     UserProfilComponent,
     CollegeListComponent,
+    EtudiantTBComponent,
 
   ],
   imports: [
