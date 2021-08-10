@@ -10,6 +10,9 @@ export class EtudiantTBComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
+
+
 
 }

@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+
+<!-- Code source de la page officiel de o-tutor-->
+<html lang="en" class="no-js">
+
+<!-- BEGIN HEAD -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>O-TUTOR | Auto-évaluation</title>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="" name="description"/>
+  <meta content="" name="author"/>
+  <!-- BEGIN GLOBAL MANDATORY STYLES -->
+  <link rel="shortcut icon" type="image/png" href="https://bdeb.o-tutor.com/assets/images/favicon.png"/>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+  <!--<link href="https://bdeb.o-tutor.com/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"/>
+  <!--<link href="https://bdeb.o-tutor.com/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>  -->
+  <link href="https://bdeb.o-tutor.com/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+
+  <!--<link href="https://bdeb.o-tutor.com/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>-->
+  <link href="https://bdeb.o-tutor.com/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+  <!-- END GLOBAL MANDATORY STYLES -->
+  <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
+  <link href="https://bdeb.o-tutor.com/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
+  <link href="https://bdeb.o-tutor.com/assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://bdeb.o-tutor.com/assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css"/>
+  <link href="https://bdeb.o-tutor.com/assets/global/plugins/morris/morris.css" rel="stylesheet" type="text/css"/>
+  <link href="https://bdeb.o-tutor.com/assets/global/plugins/select2/select2.css" rel="stylesheet" type="text/css"/>
+  <!-- END PAGE LEVEL PLUGIN STYLES -->
+  <!-- BEGIN PAGE STYLES -->
+  <link href="https://bdeb.o-tutor.com/assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/>
+  <link href="https://bdeb.o-tutor.com/assets/admin/pages/css/profile.css" rel="stylesheet" type="text/css"/>
+  <!-- END PAGE STYLES -->
+  <!-- BEGIN THEME STYLES -->
+  <!-- DOC: To use 'rounded corners' style just load 'components-rounded.css' stylesheet instead of 'components.css' in the below style tag -->
+  <link href="https://bdeb.o-tutor.com/assets/global/css/components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>
+  <link href="https://bdeb.o-tutor.com/assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+  <link href="https://bdeb.o-tutor.com/assets/admin/layout4/css/layout.css" rel="stylesheet" type="text/css"/>
+  <link href="https://bdeb.o-tutor.com/assets/admin/layout4/css/themes/light.css" rel="stylesheet" type="text/css" id="style_color"/>
+  <link href="https://bdeb.o-tutor.com/assets/admin/layout4/css/custom.css" rel="stylesheet" type="text/css"/>
+  <link href="https://bdeb.o-tutor.com/assets/css/style.css" rel="stylesheet" type="text/css"/>
+  <link href="https://bdeb.o-tutor.com/assets/css/style.min.css" rel="stylesheet" type="text/css">
+  <!-- END THEME STYLES -->
+  <link rel="shortcut icon" href="favicon.ico"/>
+
+  <style>
+    input:required:focus {
+      border: 1px solid red;
+      outline: none;
+    }
+    textarea:required:focus {
+      border: 1px solid red;
+      outline: none;
+    }
+    select:required:focus {
+      border: 1px solid red;
+      outline: none;
+    }
+  </style>
+  <script>
+    var csrf_name="ci_csrf_token";
+    var csrf_token="";
+  </script>
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+  <script type='text/javascript'>
+    (function (d, t) {
+      var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      bh.type = 'text/javascript';
+      bh.src = '//www.bugherd.com/sidebarv2.js?apikey=v6ifj1vxzqy8adukrpi3dq';
+      s.parentNode.insertBefore(bh, s);
+    })(document, 'script');
+  </script>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-sidebar-closed-hide-logo">
+
+
+<!--Loader Image with processing-->
+<script src="https://bdeb.o-tutor.com/assets/loader/js/jquery.classyloader.min.js"></script>
+<script>
+  $(document).on('click','.loader-hit',function() {
+    $('.loader').ClassyLoader({
+      percentage: 100,
+      speed: 180,
+      fontSize: '50px',
+      diameter: 80,
+      lineColor: '#006666',
+      remainingLineColor: '#00cc99',
+      fontColor:'#006666',
+      lineWidth: 10
+    });
+  });
+</script>
+
+      <style>
+        .gras{
+          font-size: 19px;
+          text-align: center;
+        }
+      </style>
+
+      <br />
+      <div class="row"  id="self_assessment">
+        <div class="col-md-12">
+          <div class="dashboard-panel">
+            <div class="dashboard-panel-body"> <form action="https://bdeb.o-tutor.com/learners/assessments" id="self-form" class="form-horizontal" method="post" accept-charset="utf-8">
+              <div class=" ">
+                <span class="select_topic left-align">Étape 1:&nbsp;Sélectionnez un cours</span>
+                <div class="dashboard-inner light-gray margin-bottom-10">
+                  <div class="dataTables_filter pull-left full-width">
+                    <label class="control-label bold col-md-2" style="margin-left: -15px;">
+                      Filtrer par cours              </label>
+                    <div class="col-md-3">
+                      <div class="btn-group full-width">
+                        <select class="form-control get_topic" id="course_id" name="course_id">
+                          <option value=""> Sélectionnez un cours</option>
+                          <option value="1"> Mécanique</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dashboard-inner-bottom border-bottom-inner"></div>
+                <div class="dashboard-inner-bottom border-bottom-inner" style="padding-bottom: 25px;">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <span class="select_topic left-align">Étape 2:&nbsp;Sélectionnez une ou plusieures section(s) du cours</span>
+                    </div>
+                    <div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="topics_grid"></div>
+                  </div>
+                  <div class="col-md-12" style="margin-bottom: 10px; margin-top: 15px;">
+                    <div class="gras"><span class="bold">
+                Questions disponibles                </span> <span class="que-number">0</span>
+                    </div>
+                    <input type="hidden" name="available_questions" id="available_questions" value="0">
+                  </div>
+                </div>
+                <div class="row">
+
+                  <div class="portlet-body form">
+
+                    <div class="col-md-12">
+                      <span class="select_topic left-align">Étape 3:&nbsp;Déterminez la durée du test</span>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label class="col-md-3 control-label bold">
+                          Nombre de questions                        </label>
+                        <div class="col-md-3">
+                          <input onKeyUp="validate_question(this)" type="text" name="number_of_questions" min="2" class="form-control" placeholder="Nombre de questions"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label class="col-md-3 control-label bold">
+                          Limite de temps (min)
+                        </label>
+                        <div class="col-md-3">
+                          <input onKeyUp="myFunction(this)" type="text" name="time_limit" min="1" max="180" pattern="\d*" class="form-control" placeholder="Limite de temps"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 hide">
+                      <div class="form-group">
+                        <label class="col-md-6 control-label bold">
+                          Questions par page                        </label>
+                        <div class="col-md-6">
+                          <select class="form-control" name="question_per_page" id="question_per_page">
+                            <option value="1">1</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class=""> </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-12">
+                      <div class="form-actions text-center">
+                        <button type="button" disabled="true" id="start_assessment" class="btn btn-circle btn-md uppercase btn-primary"><span class="circle-icon"><i class="fa fa-circle"></i></span>
+                          Commencer                    </button>
+                        <p id="loadp"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form> </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function() {
+          function disableBack() { window.history.forward() }
+          window.onload = disableBack();
+          window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
+        });
+        function myFunction(th) {
+          var tar    =   $(th).val();
+          var phoneno = /^\d+$/;
+          if(tar.match(phoneno))
+          {
+            if(tar  >   180)
+            {
+              jAlert("Maximum de 180 minutes permit","Warning");
+              $(th).val('');
+              return false;
+            }else if(tar  ==  0){
+              $(th).val('');
+              return false;
+            }
+            return true;
+          }else {
+            $(th).val('');
+            return false;
+          }
+        }
+        function validate_question1(th) {
+          var available   =   $('.que-number').html();
+          if(parseInt($(th).val())  >   parseInt(available))
+          {
+            jAlert("Vous demandez plus de questions qu'il y en a de disponibles.","Warning");
+            $(th).val('');
+          }
+          if(parseInt($(th).val())  < 2)
+          {
+            jAlert("Please enter your question minimum two.","Warning");
+            $(th).val('');
+          }
+          var e = event || window.event;
+          var key = e.keyCode || e.which;
+          if (key == 110) {
+            if (e.preventDefault) e.preventDefault();
+            e.returnValue = false;
+          }
+        }
+        function validate_question(th) {
+          var tar    =   $(th).val();
+          var phoneno = /^\d+$/;
+          if(tar.match(phoneno))
+          {
+            var available   =   $('.que-number').html();
+            if(($(th).val() ===  '0'))
+            {
+              jAlert("Le nombre de questions ne peut pas être zéro.","Warning");
+              $(th).val('');
+            }
+            if(parseInt($(th).val())  >   parseInt(available))
+            {
+              jAlert("Vous demandez plus de questions qu'il y en a de disponibles.","Warning");
+              $(th).val('');
+            }
+            return true;
+          }else {
+            $(th).val('');
+            return false;
+          }
+        }
+
+        $(document).on('click','.check-list',function(){
+          var course_list = [];
+          $.each($("input[name='course_id[]']:checked"), function(){
+            course_list.push($(this).val());
+          });
+          $(".sel_course").html(course_list.length+" Selected");
+        });
+        $(document).on('change','.get_topic',function(){
+          var course_id = $(this).val();
+          if (course_id !='')
+          {
+            $('.topics_grid').html('<div class="col-md-12"><div class="form-group text-center"><i class="fa fa-spin fa-spinner fs30"></i></div></div>');
+            var data = new Array();
+            data.push("course_id=" + course_id);
+            data.push("learner_id=" + 3661);
+            data.push("csrf_test_name=" + $.cookie("csrf_cookie_name"));
+            $.ajax({
+              type    :   'POST',
+              url     :   "https://bdeb.o-tutor.com/learners/assessments/get_topics",
+              data    :   data.join('&'),
+              success :   function(data){
+                console.log('get_topic')
+                setTimeout(function(){
+                  $('.que-number').html('0');
+                  $('.topics_grid').html(data);
+                },500);
+              }
+            });
+          } else {
+            jAlert("Sélectionnez au moins un groupe", "Warning");
+            $('.topics_grid').html('');
+            $('.que-number').html('0');
+            $('#start_assessment').prop('disabled', true);
+          }
+        });
+
+        $(document).on('change',"input[name='topic[]']",function(){
+          var course_id =   $("#course_id").val();
+          var course_list =   [];
+          course_list.push(course_id);
+          console.log(course_list);
+          if (course_id === '')
+          {
+            jAlert("Sélectionnez au moins un groupe", "Warning");
+            return;
+          }
+          var topic_list =   [];
+          $.each($("input[name='topic[]']:checked"), function(){
+            topic_list.push($(this).val());
+          });
+          if (parseInt(topic_list.length) <= 0)
+          {
+            topic_list  =   0;
+          }
+          $('.que-number').html('<i class="fa fa-spin fa-spinner"></i>');
+          var data = new Array();
+          data.push("courseArr=" + course_list);
+          data.push("topicArr=" + topic_list);
+          console.log(data);
+          data.push("csrf_test_name=" + $.cookie("csrf_cookie_name"));
+          $.ajax({
+            type    : 'POST',
+            url     : "https://bdeb.o-tutor.com/learners/assessments/count_questions_by_topics",
+            data    : data.join('&'),
+            success : function(data){
+              console.log('load questions')
+              $('.que-number').html(data);
+              $("#available_questions").val(data);
+              if(data > 0){
+                $('#start_assessment').prop('disabled', false);
+              }else{
+                $('#start_assessment').prop('disabled', true);
+              }
+            }
+          });
+        });
+
+        $(document).on('click','#start_assessment',function(){
+          var data = new Array();
+          data.push($('#self-form').serialize());
+          console.log(data);
+          data.push("csrf_test_name=" + $.cookie("csrf_cookie_name"));
+          var th      =   $(this);
+          th.find('span').html('<i class="fa fa-spin fa-spinner"></i> ');
+          $(document).find('#loadp').html('<p>Chargement de la requête...</p>');
+          $.ajax({
+            type    :   'POST',
+            url     :   "https://bdeb.o-tutor.com/learners/assessments/self_assessment",
+            data    :   data.join('&'),
+            success :   function(data){
+              console.log('self assessments');
+              console.log(data);
+              //jAlert(data);
+              data = JSON.parse(data);
+              if(data.status  ===  'error'){
+                $("#error").html('<div class="alert alert-danger flash-row"><button class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><i class="ace-icon fa fa-check green"></i>'+data.error_msg+'</div>')
+                $('html, body').animate({ scrollTop: 0 }, 'slow');
+              }else if(data.status  ===  'success'){
+                $('.processing-overlay').removeClass('hide');
+                $(".loader-hit").trigger('click');
+                $("#error").html('');
+                window.location.href = "https://bdeb.o-tutor.com/learners/assessments/start?type=learner";
+              }
+              th.find('span').html('<i class="fa fa-circle"></i>');
+            }
+          });
+        });
+      </script>
+
+
+  <!-- END CONTENT -->
+
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<style>
+  .footer {position:fixed;z-index: 3; float:left; bottom: 0; width: 100%; background-color: #006666; padding:20px; color:#fff; right: 0px; left: 0px }
+  .nav-footer ul{margin:0; padding:0;}
+  .nav-footer li{display: block; float:left; list-style:none;}
+  .nav-footer li > a{padding:0px 15px; color:#fff;display: block; float:left; list-style:none;}
+  .nav-footer li > a:hover{color:#ff6600;}
+  .social-bg{position:absolute; right:0; top:-25px}
+  .social-bg ul{margin:0 15px 0 0; padding:0}
+  .social-bg ul li { float: left; padding:8px 0; background: #c6c6c6; margin: 0 5px; min-width: 48px; list-style: none; text-align: center; font-size: 25px; }
+  .color-fb a{color:#627aad;}
+  .color-in a{color:#03679b;}
+  .color-ti a{color:#5ea9dd;}
+  .color-gg a{color:#dc483b;}
+
+</style>
+<footer class="footer">
+  <div class="nav-footer">
+    <ul>
+      <li>© 2021 O-TUTOR. Tous droits réservés </li>
+      <li><a href="https://bdeb.o-tutor.com/site/contact_us">Contactez-nous</a></li>
+      <li><a href="https://bdeb.o-tutor.com/site/term_n_conditions">Modalités et conditions</a></li>
+      <!--<li><a href="https://bdeb.o-tutor.com/site/plugins">Plugins</a></li>-->
+      <li><a href="https://bdeb.o-tutor.com/site/developers">Développeurs</a></li>
+      <!--<li><a href="https://bdeb.o-tutor.com/site/blog">Blog</a></li>-->
+    </ul>
+  </div>
+
+
+  <div class="social-bg">
+    <ul>
+      <li><span class="color-ti"><a href="javascript:void(0);"><i class="fa fa-question "></i></a></span></li>
+      <li><span class="color-fb"><a href="javascript:void(0);"><i class="fa fa-video-camera "></i></a></span></li>
+      <li><span class="color-in"><a href="javascript:void(0);"><i class="fa fa-comments "></i></a></span></li>
+    </ul>
+  </div>
+  <style>
+    .aftr_login_footer_color{color:#ffffff;}
+  </style>
+</footer>
+<!--<div class="page-footer">
+	<div class="page-footer-inner">2016 &copy; O-TUTOR</div>
+	<div class="scroll-to-top"><i class="icon-arrow-up"></i></div>
+</div>-->
+<!-- END FOOTER -->
+
+
+
+<script src="https://bdeb.o-tutor.com/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+
+<script src="https://bdeb.o-tutor.com/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://bdeb.o-tutor.com/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="https://bdeb.o-tutor.com/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="https://bdeb.o-tutor.com/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="https://bdeb.o-tutor.com/assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+
+<script src="https://bdeb.o-tutor.com/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+
+
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type="text/javascript" src="https://bdeb.o-tutor.com/assets/global/plugins/jquery.form.min.js"></script>
+<script type="text/javascript" src="https://bdeb.o-tutor.com/assets/global/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://bdeb.o-tutor.com/assets/global/plugins/jquery-validation/js/additional-methods.min.js"></script>
+<script type="text/javascript" src="https://bdeb.o-tutor.com/assets/global/plugins/select2/select2.min.js"></script>
+<script type="text/javascript" src="https://bdeb.o-tutor.com/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+<script src="https://bdeb.o-tutor.com/assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="https://bdeb.o-tutor.com/assets/global/plugins/bootstrap-daterangepicker/moment.min.js" type="text/javascript"></script>
+<script src="https://bdeb.o-tutor.com/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
+<script src="https://bdeb.o-tutor.com/assets/global/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
+<script src="https://bdeb.o-tutor.com/assets/global/plugins/fullcalendar/lang-all.js"></script>
+
+
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="https://bdeb.o-tutor.com/assets/admin/layout4/scripts/layout.js" type="text/javascript"></script>
+<script src="https://bdeb.o-tutor.com/assets/admin/layout2/scripts/quick-sidebar.js" type="text/javascript"></script>
+<script src="https://bdeb.o-tutor.com/assets/admin/pages/scripts/form-validation.js"></script>
+<script src="https://bdeb.o-tutor.com/assets/validation_functions.js"></script>
+<script src="https://bdeb.o-tutor.com/assets/jquery-alert-dialogs/js/jquery.alerts.js"></script>
+<link rel="stylesheet" href="https://bdeb.o-tutor.com/assets/jquery-alert-dialogs/css/jquery.alerts.css">
+<!-- END PAGE LEVEL SCRIPTS -->
+
+<link rel="stylesheet" href="https://bdeb.o-tutor.com/assets/tooltipster.bundle.min.css">
+<script type="text/javascript" src="https://bdeb.o-tutor.com/assets/tooltipster.bundle.min.js"></script>
+<!-- for data grid -->
+<script type="text/javascript" src="https://bdeb.o-tutor.com/assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://bdeb.o-tutor.com/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="https://bdeb.o-tutor.com/assets/global/custom.js"></script>
+
+<!---------------------->
+<script>
+  jQuery(document).ready(function() {
+    Metronic.init(); // init metronic core component
+    Layout.init(); // init layout
+  });
+</script>
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>
+<div class="hidden">
+  Array
+  (
+  [otutor] => Array
+  (
+  [last_activity] => 1628607092
+  [userinfo] => stdClass Object
+  (
+  [id] => 3661
+  [added_by] => 4
+  [parent_id] => 4
+  [user_name] => 1734955
+  [first_name] => Laura
+  [last_name] => Fournier-Poisson
+  [full_name] =>
+  [short_name] =>
+  [profile_image] =>
+  [salt] => $6$rounds=5000$NzMzZTFjNjIz$
+  [email] => 1734955@bdeb.qc.ca
+  [location] =>
+  [description] =>
+  [status] => active
+  [contact_number] =>
+  [created] => 2017-08-31 04:52:16
+  [modified] => 2017-08-31 04:52:16
+  [last_login] => 2021-08-09 14:49:35
+  [user_type] => 3
+  [language] => french
+  [token] => 8a61a3523928a84dd5fd5e9ca06690e6
+  [email_verify] => 1
+  [name] => Laura Fournier-Poisson
+  [site_id] => 39
+  [isLogin] => yes
+  [login_type] =>
+  [instance_name] => bdeb
+  )
+
+  [isLogin] => yes
+  [login_type] =>
+  [instance_name] => bdeb
+  )
+
+  )
+</div>
