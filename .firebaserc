@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "web-o-tutor": {
+      "hosting": {
+        "web-o-tutor": [
+          "web-o-tutor"
+        ]
+      }
+    }
+  }
+}
