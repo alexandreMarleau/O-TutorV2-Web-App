@@ -21,10 +21,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { SidebarModule } from 'ng-sidebar';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 const routes: Routes = [
   {path: 'about', component: AboutPageComponent},
+  {path: 'home', component: HomePageComponent},
   {path: 'courses', component: CourseListComponent},
   {path: 'login', component: LoginComponent},
   {path: 'question', component: QuestionComponent},
@@ -47,7 +50,8 @@ const routes: Routes = [
     CollegeListComponent,
     EtudiantTBComponent,
     AutoEvaluationComponent,
-    MainHeaderComponent
+    MainHeaderComponent,
+    HomePageComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -60,7 +64,8 @@ const routes: Routes = [
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
