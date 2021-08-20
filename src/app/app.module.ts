@@ -12,6 +12,15 @@ import { UserProfilComponent } from './components/user-profil/user-profil.compon
 import { CollegeListComponent } from './components/college-list/college-list.component';
 import { EtudiantTBComponent } from './components/etudiant-tb/etudiant-tb.component';
 import { AutoEvaluationComponent } from './components/auto-evaluation/auto-evaluation.component';
+import { MainHeaderComponent } from './components/main-header/main-header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { SidebarModule } from 'ng-sidebar';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 const routes: Routes = [
@@ -38,12 +47,20 @@ const routes: Routes = [
     CollegeListComponent,
     EtudiantTBComponent,
     AutoEvaluationComponent,
-
+    MainHeaderComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
+    SidebarModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

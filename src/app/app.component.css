@@ -5,3 +5,16 @@
 a:hover {
     color: darkorange;
 }
+
+.circle-faicon {
+    background: #fff;
+    width: 65px;
+    height: 65px;
+    font-size: 36px;
+    color: darkorange;
+    border-radius: 100%;
+    padding: 2px 7px;
+    float: left;
+    line-height: 58px;
+    text-align: center;
+}

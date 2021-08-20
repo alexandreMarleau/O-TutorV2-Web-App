@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'web-o-tutor';
+  
+  isAuth: boolean = false;
+
+  _toggleOpened(): void {
+    
+  }
+
 }
