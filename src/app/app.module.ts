@@ -35,8 +35,8 @@ const routes: Routes = [
   {path: 'collegelist', component: CollegeListComponent},
   {path: 'etudiant', component: EtudiantTBComponent},
   {path: 'autoevaluation', component: AutoEvaluationComponent},
-  {path: '', redirectTo: '/about', pathMatch: 'full'},
-  {path: '**', redirectTo: '/about', pathMatch: 'full'}
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];
 
 @NgModule({
