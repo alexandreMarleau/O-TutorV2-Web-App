@@ -7,13 +7,6 @@
     background-size: cover;
 }
 
-.container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding-bottom: 50px;
-}
 
 .carousel-indicators {
     position: absolute;
@@ -53,3 +46,154 @@ p {
     margin-bottom: 20px;
     font-weight: lighter;
 }
+
+.triangle-down-bg {
+	width: 0;
+    margin: auto;
+	height: 0;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	border-top: 50px solid #f8f9fa;
+}
+
+
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.display {
+    text-align: center;
+    margin-bottom: 50px;
+    float: left;
+    width: 100%;
+}
+
+.members-L {
+    float: left;
+    width: 150px;
+    height: 150px;
+    border: 10px solid darkorange;
+    border-radius: 100%;
+    margin-right: -40px;
+    overflow: hidden;
+}
+
+.members-R {
+    overflow: hidden;
+    position: relative;
+}
+
+.members-R-one {
+    margin-top: 51px;
+    float: left;
+    width: 100%;
+    font-size: 42px;
+    color: darkorange;
+    font-family: Roboto-Bold_1;
+}
+
+.members-R-two {
+    float: left;
+    width: 100%;
+    font-size: 30px;
+    color: darkorange;
+    font-family: Roboto-Bold_1;
+    margin: 10px 0 0 0;
+}
+
+.members-R-three {
+    float: left;
+    width: 100%;
+    font-size: 30px;
+    color: darkorange;
+    font-family: Roboto-Bold_1;
+    margin: 10px 0 0 0;
+}
+
+
+.triangle-down-white {
+	width: 0;
+    margin: auto;
+	height: 0;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	border-top: 50px solid white;
+}
+
+.top-dashed {
+    border-bottom: 1px dashed #ccc;   
+}
+
+.padding-top-100 {
+    padding-top: 25px;
+}
+
+.padding-bottom-100 {
+    padding-bottom: 100px;
+}
+
+.mid-bg h1 {
+    width: 100%;
+    font-size: 60px;
+    font-weight: lighter;
+    color: darkorange;
+    text-align: center;
+   margin-top: 50px;
+}
+
+.mid-bg h2 {
+    margin-top: 50px;
+    width: 100%;
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+    font-family: Roboto-Bold_1;
+}
+
+.mid-bg p {
+    width: 100%;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #000000;
+    text-align: center;
+}
+
+.display-none {
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+
+.any-time-L {
+    float: left;
+    width: 203px;
+    height: 203px;
+    border: 10px solid darkorange;
+    border-radius: 100%;
+    margin-right: 30px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.any-time-R {
+    overflow: hidden;
+    position: visible;
+}
+
+.get-started h1 {
+    width: 100%;
+    font-size: 26px;
+    font-family: Roboto-Bold_1;
+    color: darkorange;
+    margin: 0 0 15px 0;
+}
+
+.get-started p {
+    width: 100%;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #000000;
+}
+
