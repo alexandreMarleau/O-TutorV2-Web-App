@@ -23,6 +23,7 @@ import { SidebarModule } from 'ng-sidebar';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule} from "@angular/forms";
 
 
 const routes: Routes = [
@@ -65,7 +66,8 @@ const routes: Routes = [
     MatIconModule,
     MatDividerModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
