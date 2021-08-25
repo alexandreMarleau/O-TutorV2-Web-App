@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -12,14 +13,19 @@ export class MainHeaderComponent implements OnInit {
   isAuth: boolean = true;
   username = "Laura Fournier"
 
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   
   ngOnInit(): void {
   }
 
-  _toggleOpened(): void {
-   
+  onClickAutoEvaluateBtn(){
+    this.router.navigateByUrl("/autoevaluation")
+  }
+
+  onProfileCLick(){
+    this.router.navigateByUrl("/profil")
   }
 
 }

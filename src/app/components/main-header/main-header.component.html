@@ -42,7 +42,7 @@
       <mat-form-field appearance="fill">
         <mat-label> {{ username }}</mat-label>
         <mat-select>
-          <mat-option >
+          <mat-option (click)="onProfileCLick()">
             Mon Profile
           </mat-option>
           <mat-option >
@@ -62,8 +62,18 @@
   <mat-sidenav #sidenav>
     <mat-nav-list>
 
-      <a mat-list-item [routerLink]="'/accounts'"> Tableau de bord </a>
-      <a mat-list-item [routerLink]="'/create-account'"> Apprendre </a>
+      <a mat-list-item [routerLink]="'/etudiant'"> Tableau de bord </a>
+
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Apprendre</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Mes groupes</button>
+          <button ngbDropdownItem (click)="onClickAutoEvaluateBtn()">Auto-évaluation</button>
+        </div>
+      </div>  
+
+      
+      
       <a mat-list-item [routerLink]="'/contacts'"> Communauté </a>
 
     </mat-nav-list>
