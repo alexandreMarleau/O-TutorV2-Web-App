@@ -8,10 +8,13 @@ import { Router } from '@angular/router';
   templateUrl: './main-header.component.html',
   styleUrls: ['./main-header.component.css']
 })
+
+
 export class MainHeaderComponent implements OnInit {
 
-  isAuth: boolean = true;
+  isAuth: boolean = false;
   username = "Laura Fournier"
+  
 
 
   constructor(private router: Router) { }

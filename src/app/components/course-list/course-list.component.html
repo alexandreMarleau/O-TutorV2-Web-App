@@ -1,8 +1,36 @@
-<p>Cours: </p>
+<div class="container-full">
 
-<link rel="stylesheet" href="course-list.component.css">
-<ol>
-  <li class=""><a href="question">Math</a></li>
-  <li class=""><a href="question">Histoire</a></li>
-  <li class=""><a href="question">Anglais</a></li>
-</ol>
+
+  <div class="container">
+    <div class="row padding-bottom-50">
+      <div class="container">
+        <div class="about-dashed">
+          <h1>Catalogue des cours</h1>
+          <h3>Il y a présentement 10 cours disponibles</h3>
+          <div class="lms-heading-bg margin-bottom-40">
+            <div class="icon-white"><img src="https://bdeb.o-tutor.com/frontend_assets/images/icon.png" alt=""></div>
+            <div class="text-white">
+              <h3>Nouveaux cours</h3>
+            </div>
+          </div>
+          <div class="container">
+            <ng-carousel #carouselRef="ngCarousel" [config]="config">
+              <ng-template [ngCarouselSlide]="carouselRef" let-item>
+                <div class="new-courses-img">
+                  <a href="https://bdeb.o-tutor.com/site/course_view/all/0/11"><img
+                      src="https://bdeb.o-tutor.com/frontend_assets/images/course-catalog-icon.png"></a>
+
+                  <!--<a href="https://bdeb.o-tutor.com/site/course_view/all/0/0"><img src="https://bdeb.o-tutor.com/frontend_assets/images/course-catalog-icon.png"></a>-->
+                </div>
+
+                <h1>{{item.name}}</h1>
+              </ng-template>
+            </ng-carousel>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

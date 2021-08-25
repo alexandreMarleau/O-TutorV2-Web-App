@@ -51,4 +51,62 @@ ol a:hover:after {
   border-left-color: #f9dd94;
 }
 
+.new-courses-img {
+  display: inline-block;
+  width: 190px;
+  height: 190px;
+  border: 10px solid #38bb93;
+  border-radius: 100%;
+}
+
+.about-dashed h1 {
+  float: left;
+  width: 100%;
+  font-size: 40px;
+  line-height: 30px;
+  color: #006666;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+
+.about-dashed h3 {
+  float: left;
+  width: 100%;
+  font-size: 25px;
+  color: #000000;
+  margin: 0 0 20px 0;
+}
+
+.lms-heading-bg {
+  float: left;
+  width: 100%;
+  background-repeat: repeat-x;
+  min-height: 46px;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+.lms-heading-bg .text-white {
+  float: left;
+  width: auto;
+  background: white;
+  font-size: 30px;
+  line-height: 42px;
+  padding: 0 15px 0 13px;
+}
+
+.lms-heading-bg .text-white {
+  font-size: 30px;
+  float: none;
+  overflow: hidden;
+  line-height: 45px;
+}
+
+.lms-heading-bg .icon-white {
+  float: left;
+  width: auto;
+  background: #fff;
+}
 

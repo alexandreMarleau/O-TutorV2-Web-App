@@ -26,6 +26,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from "@angular/forms";
+import { CarouselModule } from 'ng-carousel-cdk';
 
 
 const routes: Routes = [
@@ -61,6 +62,7 @@ const routes: Routes = [
     SidebarModule,
     BrowserModule,
     AppRoutingModule,
+    CarouselModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
