@@ -1,3 +1,36 @@
 ng-sidebar-container {
     height: 100vh;
 }
+
+.page-header.navbar.navbar-fixed-top {
+    z-index: 999999;
+}
+
+.page-header.navbar .page-logo {
+    width: auto;
+}
+
+.page-header.navbar .menu-toggler.responsive-toggler {
+    display: inline-block;
+}
+
+.page-header.navbar .page-top {
+    background: #37444e;
+    border-top: 1px solid #FFF;
+}
+
+.page-header.navbar .top-menu .navbar-nav {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+.pull-right {
+    float: right!important;
+}
+
+.page-header.navbar .top-menu .navbar-nav > li.dropdown {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    display: inline-block;
+}

@@ -17,8 +17,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list'
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatSelectModule } from '@angular/material/select';
 import { SidebarModule } from 'ng-sidebar';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomePageComponent } from './components/home-page/home-page.component';
@@ -62,8 +64,11 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
+    MatSelectModule,
+    MatListModule,
     MatButtonModule,
     MatIconModule,
+  
     MatDividerModule,
     FontAwesomeModule,
     NgbModule,

@@ -9,7 +9,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class MainHeaderComponent implements OnInit {
 
-  isAuth: boolean = false;
+  isAuth: boolean = true;
+  username = "Laura Fournier"
 
   constructor() { }
 

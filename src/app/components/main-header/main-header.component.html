@@ -23,19 +23,58 @@
         <li class="nav-item">
           <a class="nav-link active" href="login">Se connecter</a>
         </li>
+        
       </ul>
     </div>
   </div>
 </nav>
 
-
-<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark sticky-top" *ngIf="isAuth">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+<mat-toolbar color="primary" *ngIf="isAuth">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <a class="navbar-brand" href="/home">
       <img src="assets/logos/logo.png" alt="" width="250" height="70">
-    </a>     
-  </div>
-</nav>
+    </a>
+    <span class="menu-spacer"></span>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label> {{ username }}</mat-label>
+        <mat-select>
+          <mat-option >
+            Mon Profile
+          </mat-option>
+          <mat-option >
+            <button class="btn-danger">Se déconnecter</button>
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+     
+
+    </div>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+
+      <a mat-list-item [routerLink]="'/accounts'"> Tableau de bord </a>
+      <a mat-list-item [routerLink]="'/create-account'"> Apprendre </a>
+      <a mat-list-item [routerLink]="'/contacts'"> Communauté </a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
 <div class="p-1 mb-1 bg-warning text-dark"></div> 
 
