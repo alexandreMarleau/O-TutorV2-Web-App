@@ -1,0 +1,154 @@
+.lms-heading-bg {
+    float: left;
+    width: 100%;
+    background-repeat: repeat-x;
+    min-height: 46px;
+  }
+  
+  b, strong {
+    font-weight: bold;
+  }
+  
+  .lms-heading-bg .text-white {
+    float: left;
+    width: auto;
+    background: white;
+    font-size: 30px;
+    line-height: 42px;
+    padding: 0 15px 0 13px;
+  }
+  
+  .lms-heading-bg .text-white {
+    font-size: 30px;
+    float: none;
+    overflow: hidden;
+    line-height: 45px;
+  }
+  
+  .lms-heading-bg .icon-white {
+    float: left;
+    width: auto;
+    background: #fff;
+  }
+  
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .arrow-mid {
+    position: relative;
+  }
+  
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  .padding-top-100 {
+    padding-top: 100px;
+  }
+  
+  .grid {
+    float: left;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  
+  .course-heading-bg {
+    float: left;
+    width: 100%;
+    min-height: 60px;
+  }
+  
+  .margin-bottom-10 {
+    margin-bottom: 10px;
+  }
+  
+  .course-heading-bg .icon {
+    float: left;
+    width: auto;
+    background: #f0f0f0;
+  }
+  
+  .course-heading-bg .text {
+    float: left;
+    width: auto;
+    background: #f0f0f0;
+    font-size: 30px;
+    line-height: 42px;
+    padding: 0 15px 0 20px;
+  }
+  
+  b, strong {
+    font-weight: bold;
+  }
+  
+  .search-by {
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  
+  .search-by input {
+    float: left;
+    width: 100%;
+    padding: 5px 65px 5px 30px;
+    border: 0px;
+    border-radius: 50px;
+    position: relative;
+    font-size: 24px;
+    line-height: 50px;
+  }
+  
+  .search-by-btn {
+    background: #ff6600;
+    border: 0;
+    padding: 10px 18px;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    right: 0;
+    border-radius: 100%;
+    top: -1px;
+  }
+  
+
+  .scrl_cat {
+    max-height: 300px;
+    min-height: 50px;
+    overflow-y: auto;
+}
+
+.rwd-table {
+    border: 0px solid #fff;
+}
+
+.rwd-table {
+    background: #dddddd;
+    color: #555;
+    overflow: hidden;
+}
+
+.rwd-table {
+    margin: 1em 0;
+    min-width: 300px;
+}
+
+.rwd-table tr {
+    border-top: 0px solid #006766;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.rwd-table th, .rwd-table td {
+    margin: 0px 0px !important;
+    background: #006766;
+    color: #ffffff;
+}
+
+.rwd-table th, .rwd-table td:before {
+    color: #ffffff;
+}
+

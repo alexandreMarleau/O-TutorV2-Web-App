@@ -27,6 +27,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from "@angular/forms";
 import { CarouselModule } from 'ng-carousel-cdk';
+import { SearchComponent } from './components/search/search.component';
 
 
 const routes: Routes = [
@@ -55,7 +56,8 @@ const routes: Routes = [
     EtudiantTBComponent,
     AutoEvaluationComponent,
     MainHeaderComponent,
-    HomePageComponent
+    HomePageComponent,
+    SearchComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
