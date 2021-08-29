@@ -10,32 +10,11 @@ import {map} from "rxjs/operators";
   providedIn: 'root'
 })
 export class AuthService {
-  IsLoggedIn: boolean = false;
 
-
-  currentUser: IUser = {
-    username: "",
-    password: "",
-    token: "",
-  };
 
  constructor(private http: HttpClient) { }
 
-login(model: any): Observable<IUser>{
-    return this.http.post('https://o-tutor.com/webservices/auth/token',model).pipe(
-      map((response: any) => {
-        this.IsLoggedIn = true;
-        this.currentUser.username = response.username;
-        this.currentUser.password = response.password;
-        this.currentUser.token = response.token;
+login (username:string, password: string){
 
-        return this.currentUser;
-      })
-
-    );
-
-}
-logout(){
-    this.IsLoggedIn = false;
 }
 }

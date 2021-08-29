@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CarouselConfig } from 'ng-carousel-cdk';
+import {CarouselConfig} from "ng-carousel-cdk";
+
 
 @Component({
   selector: 'app-course-list',
@@ -11,13 +12,13 @@ import { CarouselConfig } from 'ng-carousel-cdk';
 export class CourseListComponent implements OnInit {
 
 
-  
+
 
   config: CarouselConfig<CarouselItem> = {
     items: [ {name: 'physique'},
       {name: 'Mécanique'},
       {name: 'Agir professionel'},],
-    
+
   }
 
   constructor() { }
@@ -25,7 +26,7 @@ export class CourseListComponent implements OnInit {
   ngOnInit(): void {
 
     this.config.slideWidth = 30;
-    
+
   }
 
 }

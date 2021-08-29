@@ -70,7 +70,7 @@ const routes: Routes = [
     MatListModule,
     MatButtonModule,
     MatIconModule,
-  
+
     MatDividerModule,
     FontAwesomeModule,
     NgbModule,
