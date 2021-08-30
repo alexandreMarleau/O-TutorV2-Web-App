@@ -28,6 +28,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from "@angular/forms";
 import { CarouselModule } from 'ng-carousel-cdk';
 import { SearchComponent } from './components/search/search.component';
+import { UserComponent } from './components/user/user.component';
+import {HttpClientModule} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
+
+
 
 
 const routes: Routes = [
@@ -40,6 +45,7 @@ const routes: Routes = [
   {path: 'collegelist', component: CollegeListComponent},
   {path: 'etudiant', component: EtudiantTBComponent},
   {path: 'autoevaluation', component: AutoEvaluationComponent},
+  {path: 'user', component: UserComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];
@@ -57,7 +63,9 @@ const routes: Routes = [
     AutoEvaluationComponent,
     MainHeaderComponent,
     HomePageComponent,
-    SearchComponent
+    SearchComponent,
+    UserComponent,
+
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -72,7 +80,7 @@ const routes: Routes = [
     MatListModule,
     MatButtonModule,
     MatIconModule,
-
+    HttpClientModule,
     MatDividerModule,
     FontAwesomeModule,
     NgbModule,
