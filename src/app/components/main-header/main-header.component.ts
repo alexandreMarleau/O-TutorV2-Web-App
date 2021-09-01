@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {AuthService} from "../../services/auth.service";
+
+
 
 
 
@@ -12,15 +15,15 @@ import { Router } from '@angular/router';
 
 export class MainHeaderComponent implements OnInit {
 
-  isAuth: boolean = false;
+
+isAuth: boolean = false;
+  constructor ( public authService: AuthService, private router: Router) {}
+
   username = "Laura Fournier"
-  
 
 
-  constructor(private router: Router) { }
-
-  
   ngOnInit(): void {
+
   }
 
   onClickAutoEvaluateBtn(){

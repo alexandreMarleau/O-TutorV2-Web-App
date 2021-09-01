@@ -25,12 +25,13 @@ import { SidebarModule } from 'ng-sidebar';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CarouselModule } from 'ng-carousel-cdk';
 import { SearchComponent } from './components/search/search.component';
 import { UserComponent } from './components/user/user.component';
 import {HttpClientModule} from "@angular/common/http";
 import {HttpClient} from "@angular/common/http";
+import {MatCardModule} from "@angular/material/card";
 
 
 
@@ -84,7 +85,9 @@ const routes: Routes = [
     MatDividerModule,
     FontAwesomeModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
