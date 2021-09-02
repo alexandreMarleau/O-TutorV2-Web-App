@@ -21,14 +21,18 @@ export class AuthService {
   }
 
   login(username: string, password: string) {
-    return this.apiService.login(username, password).pipe(
+
+    return this.apiService.getUser(username, password)/*.pipe(
       tap((response: any) => {
+        localStorage.setItem("Auth", response.auth_token);*/
         this._isLoggedIn$.next(true);
-        localStorage.setItem('profanis_auth', response.token);
-      })
-    );
+        //localStorage.setItem('profanis_auth', response.token);
+      //})
+   // );
   }
 }
+
+
 
 
 

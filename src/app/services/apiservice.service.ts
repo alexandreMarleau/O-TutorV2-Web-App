@@ -7,9 +7,19 @@ import {Observable} from "rxjs";
 })
 export class ApiService {
   constructor(private http: HttpClient) {}
-
+/*
   login(username: string, password: string) {
-    return this.http.post('login', { username, password });
+    return this.http.post('http://8g9dz.mocklab.io/auth/token', { username, password });
+  }*/
+
+  getUser(username: string, password: string){
+    this.http.post<any>('http://drjev.mocklab.io/user', { username, password }).subscribe(
+      response => {
+        console.log(response)
+        localStorage.setItem("Auth", response.auth_token);
+
+      }
+    );
   }
 
 }

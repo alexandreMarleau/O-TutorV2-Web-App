@@ -17,12 +17,18 @@ export class MainHeaderComponent implements OnInit {
 
 
 isAuth: boolean = false;
-  constructor ( public authService: AuthService, private router: Router) {}
+
+  constructor (private router: Router) {}
 
   username = "Laura Fournier"
 
 
   ngOnInit(): void {
+  if (localStorage.getItem("Auth") != null)
+  {
+    this.isAuth = true;
+  }
+
 
   }
 
