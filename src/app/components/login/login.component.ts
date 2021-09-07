@@ -37,8 +37,9 @@ export class LoginComponent {
         console.log(response)
         localStorage.setItem("Auth", response.auth_token);
         this.router.navigateByUrl("/etudiant")
-
+        window.location.reload();
       }
     );
   }
+
 }

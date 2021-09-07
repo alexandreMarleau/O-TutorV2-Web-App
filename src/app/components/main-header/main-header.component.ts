@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {AuthService} from "../../services/auth.service";
+import { Observable, interval, Subscription } from 'rxjs';
 
 
 
@@ -38,6 +38,11 @@ isAuth: boolean = false;
 
   onProfileCLick(){
     this.router.navigateByUrl("/profil")
+  }
+
+  logout() {
+    localStorage.removeItem("Auth");
+    window.location.reload();
   }
 
 }
