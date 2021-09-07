@@ -29,15 +29,16 @@ export class LoginComponent {
 
   submitForm() {
       this.getUser(this.username, this.password)
+      this.router.navigateByUrl("/etudiant")
   }
 
   getUser(username: string, password: string){
     this.http.post<any>('http://8g9dz.mocklab.io/auth/token', { username, password }).subscribe(
       response => {
         console.log(response)
-        localStorage.setItem("Auth", response.auth_token);
-        this.router.navigateByUrl("/etudiant")
+        localStorage.setItem("Auth", response.auth_token);        
         window.location.reload();
+        
       }
     );
   }

@@ -16,7 +16,7 @@ import { Observable, interval, Subscription } from 'rxjs';
 export class MainHeaderComponent implements OnInit {
 
 
-isAuth: boolean = false;
+  isAuth: boolean = false;
 
   constructor (private router: Router) {}
 
@@ -27,6 +27,7 @@ isAuth: boolean = false;
   if (localStorage.getItem("Auth") != null)
   {
     this.isAuth = true;
+    this.router.navigateByUrl("/etudiant")
   }
 
 
@@ -40,9 +41,12 @@ isAuth: boolean = false;
     this.router.navigateByUrl("/profil")
   }
 
-  logout() {
+  logout() { 
     localStorage.removeItem("Auth");
-    window.location.reload();
+    
+    this.isAuth = false
+
+    this.router.navigateByUrl("/login");
   }
 
 }

@@ -24,7 +24,7 @@
       <!-- Login Form -->
       <form (ngSubmit)="submitForm()" [formGroup]="form" autocomplete="off">
         <input type="text" id="username" class="fadeIn second"  placeholder="Nom d'utilisateur" formControlName="username" name="username" [(ngModel)]="username">
-        <input type="text" id="password" class="fadeIn third"  placeholder="Mot de passe" formControlName="password" name="password" [(ngModel)]="password">
+        <input type="password" id="password" class="fadeIn third"  placeholder="Mot de passe" formControlName="password" name="password" [(ngModel)]="password">
 
         <!-- Le bouton renvoie a la page des étudiants pour l'instant-->
 

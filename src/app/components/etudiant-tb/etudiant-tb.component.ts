@@ -8,9 +8,11 @@ import {HttpClient} from "@angular/common/http";
 })
 export class EtudiantTBComponent implements OnInit {
 
+  
+
 
   ngOnInit(): void {
-
+    
   }
 
 
